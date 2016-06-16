@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="Description" content="TromsoFP Main Page">
+    <meta name="Keywords" content="">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troms&oslash;FP</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+          <!-- body { -->
+          <!--   visibility: hidden; -->
+          <!--   padding-top: 10px; -->
+          <!--   padding-bottom: 10px; -->
+          <!-- } -->
+
+          /* Custom container */
+          .container-narrow {
+            margin: 0 auto;
+            max-width: 700px;
+          }
+          .container-narrow > hr {
+            margin: 30px 0;
+          }
+
+          /* Main marketing message and sign up button */
+          .jumbotron {
+            margin: 20px 0;
+            text-align: center;
+          }
+          .jumbotron h1 {
+            font-size: 72px;
+            line-height: 1;
+          }
+          .jumbotron .btn {
+            font-size: 21px;
+            padding: 14px 24px;
+          }
+    </style>
+    <script src='js/jquery-1.11.0.min.js' type='text/javascript'></script>
+    <script src='js/bootstrap.min.js' type='text/javascript'></script>
+    <link rel='stylesheet' href='css/bootstrap.css' type='text/css' media='screen'/>
+    <link rel='stylesheet' href='css/bootstrap-responsive.css' type='text/css' media='screen'/>
+    <link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='screen'/>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <ul class="nav">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#events">EVENTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </br>
+    </br>
+
+    <div class="container">
+        <div class="col-md-9" role="main">
+
+            <div class="jumbotron">
+                <h4>Welcome to</h4>
+                <h1>Troms&oslash;FP</h1>
+
+                <h4>Troms&oslash; Functional Programming Users Group</h4>
+            </div>
+
+            <div class="hero-unit">
+                <a name="abount"></a>
+                <p class="lead">
+                About Troms&oslash;FP
+                </p>
+
+                <p>
+                Interested in functional programming (e.g. Clojure, Erlang,
+                F#, Haskell, Lisp...)? Perfect, come join us!
+
+                We are a group of functional programming enthusiasts living in
+                and around Tromsø, who enjoy a friendly discussion about
+                programming languages and coding philosophy. The group spans
+                the full spectrum from the die-hard Haskeller to those who
+                have hardly heard of functional programming, but are curious
+                to learn more.
+
+                Our aim is to teach and learn from each other, exchange ideas
+                and have fun. We value hands on coding sessions more than
+                lectures, and think pair and group programming is a blast.
+                </p>
+
+                </br>
+                <p>The Chef recommends:
+                <ul>
+                    <li><a href="https://pragprog.com/magazines/2013-01/functional-programming-basics">Functional programming basics</a></li>
+                    <li><a
+                            href="http://simontylercousins.net/does-the-language-you-use-make-a-difference-revisited/">Does
+                            the Language You Use Make a Difference?</a></li>
+                    <li><a
+                            href="https://www.youtube.com/watch?v=o9pEzgHorH0">Stop
+                        writing classes!</a></li>
+                    <li><a
+                            href="https://www.infoq.com/presentations/Value-Values">The
+                        Value of Values</a></li>
+                    <li><a href="http://fsharpforfunandprofit.com/">F# for fun
+                        and profit</a></li>
+                </ul>
+                </p>
+            </div>
+
+            </br>
+            </br>
+
+            <div class="hero-unit">
+                <a name="events"></a>
+                <p class="lead">
+                Events and discussions
+                </p>
+
+                <p>
+                We organise meet-ups around pizza and caffeine laden
+                drinks, with informal talks, discussions, coding sessions and
+                hackathons. See our <a href="https://www.facebook.com/groups/730926837047653/events/">events
+                page</a> for past an upcoming events.
+
+                Join the discussions at the
+                <a href="https://www.facebook.com/groups/730926837047653/">Troms&oslash;FP Facebook group</a>
+                and follow us on Twitter
+                <a href="https://twitter.com/monadfix/lists/tromsofp">@TromsoFP</a>
+                and
+                <a class="btn btn-large" href="https://github.com/tromsofp/">GitHub</a>!
+                </p>
+            </div>
+
+            </br>
+            </br>
+
+            <div class="hero-unit">
+                <a name="contact"></a>
+                <p class="lead">
+                Contact
+                </p>
+
+                <p>
+                Jonas Jus&eacute;lius (firstname.lastname@gmail.com)
+                </br>
+                Radovan Bast (firstname.lastname@uit.no)
+                </br>
+                Klaske van Vuurden (firstname.van.lastname@itpartner.no)
+                </p>
+            </div>
+
+            </br>
+            </br>
+            <h3>Screenshots:</h3>
+<pre>
+lambda:~% ghci
+GHCi, version 7.10.1.20150715: http://www.haskell.org/ghc/  :? for help
+λ> :m Data.List Data.Char Data.Bits Numeric
+λ> :{
+foldl ((. reverse) . (++)) mempty
+  . intersperse [chr $ 2^5]
+  . words . map (chr . xor 0xff . fst . head . readHex)
+  . takeWhile (not . null) . unfoldr (Just . splitAt 2)
+  $ concat ["919690b5df889091df9b919edf9a92909c9a9ddf8693",
+    "939e9190968b9c918a99df9b9a9196939c9196dfde869e9b908b"]
+:}
+</pre>
+            </br>
+            </br>
+            <div class="hero-unit">
+                <a name="contact"></a>
+                <p class="lead">
+                Resources
+                </p>
+                <p>
+                        <a href="http://haskell.org">Haskell<a/> &amp;
+                        <a href="http://stackage.org">Stackage<a/>,
+                        <a href="http://fsharp.org">F#<a/> &amp;
+                        <a href="http://www.nuget.org">NuGet<a/>,
+                        <a href="http://clojure.org">Clojure<a/> &amp;
+                        <a href="http://clojars.org">Clojars<a/>,
+                        <a href="http://elixir-lang.org/">Elixir<a/> &amp;
+                        <a href="https://hex.pm/">Hex<a/>
+                </p>
+            </div>
+            </br>
+            </br>
+
+            <p class="page-header">
+            <a class="btn btn-large"
+                href="https://github.com/tromsofp/tromsofp.org.git">Fork me on GitHub</a>
+            </br>
+            This ace theme is made possible by beautiful work from:
+            <a href="https://github.com/kristopolous/BOOTSTRA.386">kristopoulus</a>
+            </p>
+
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+</body>
+</html>
